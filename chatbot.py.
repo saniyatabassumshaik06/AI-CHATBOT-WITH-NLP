@@ -1,0 +1,29 @@
+import nltk
+from nltk.chat.util import Chat, reflections
+
+pairs = [
+    [
+        r"hi|hello|hey",
+        ["Hello!", "Hi there!", "Hey! How can I help you?"]
+    ],
+    [
+        r"what is your name ?",
+        ["I'm a chatbot created by Stalin.", "You can call me ChatBuddy."]
+    ],
+    [
+        r"how are you ?",
+        ["I'm good, thank you!", "Doing great! How about you?"]
+    ],
+    [
+        r"quit",
+        ["Bye! Have a great day!", "Goodbye!"]
+    ],
+]
+
+def main():
+    print("Hi, I'm ChatBuddy. Type 'quit' to exit.")
+    chat = Chat(pairs, reflections)
+    chat.converse()
+
+if __name__ == "__main__":
+    main()
